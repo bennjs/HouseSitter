@@ -22,3 +22,17 @@ body {
   margin-bottom: 5px;
   margin-top: 30px;
 }
+.fa-arrow-circle-right {
+    margin-right:8px;
+    float:left;
+}
+.subtitle-toggle {
+    text-decoration: underline;
+}
+.subtitle-toggle:hover {
+    color: #00FF00;
+}
+
+.hidden-text {
+    display: none;
+}
