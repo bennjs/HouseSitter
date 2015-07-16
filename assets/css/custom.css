@@ -33,7 +33,7 @@ body {
 .row .app-download-images {
     padding: 12px;
     vertical-align: middle;
-    width: 130px;
+    width: 125px;
 }
 #original-panel {
     color: #31708f;
@@ -54,7 +54,7 @@ body {
     text-decoration: underline;
 }
 .subtitle-toggle:hover {
-    color: #00FF00;
+    color: #778492;
 }
 .hidden-text {
     display: none;
@@ -64,4 +64,9 @@ body {
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 0.5em;
+}
+.footer {
+    color: gray;
+    font-size: 12px;
+    text-align: center;
 }
