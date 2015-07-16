@@ -27,64 +27,190 @@
 
     </head>
 	
-    <body onload="flightTracker();">
+    <body onload="tripStatus();">
     
         <!-- ******HEADER****** -->
         <header class="header">
             <div class="container">
                 <!-- IMAGE -->
                 <div class="header-content pull-left">
-                    <h1 class="title" id="hello"></h1>
-                    <input type="button" name ="helloButton" onclick="helloWorld()" value="Click to say hello!">
-                    <p id="flightCheck"></p>
+                    <h1 class="title" id="hello">Hello!</h1>
+                    <!--<input type="button" name ="helloButton" onclick="tripStatus()" value="Click to say hello!">-->
+                    <div class="whereAreThey">
+                        <p id="tripStatus" class="trip-status"></p>
+                        <!--<p id="debug"></p>-->
+                    </div><!--//whereAreThey-->
                 </div><!--//header-content-->
             </div><!--//container-->
         </header><!--//header-->
         
-        <br></br>
+        <br>
 
+        <!-- ******PANELS****** -->
         <div class="container">
             <div class="row">
-                <div class="col-sm6 col-md-4">
-                    <div class="panel panel-info">
+                <div class="col-sm-6 col-md-4">
+                    <div class="panel panel-info"><!--The Flat (panel panel-info)-->
                         <div class="panel-heading">
                             <h3 class="panel-title">The Flat</h3>
                         </div><!--//panel-heading-->
                         <div class="panel-body">
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('landlordContact')"><i class="fa fa-arrow-circle-right"></i>Who's the landlord and what happens if I need to get in contact with him?</h4>
-                            <p id="landlordContact" class="hidden-text">The landlord's name is Ade (Pronounced: Addy) Jimoh. His number is 0758017905.</p>
+                            <p id="landlordContact" class="hidden-text">The landlord's name is Ade (Pronounced: Addie) Jimoh. His number is 0758017905.</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('binDay')"><i class="fa fa-arrow-circle-right"></i>When do the bins need taking out?</h4>
-                            <p id="binDay" class="hidden-text">The bins are collected early on Thursday mornings to it's probably best to make sure they're out on Wednesday evenings (Our neighbours sometimes forget).</p>
+                            <p id="binDay" class="hidden-text">The bins are collected early on Thursday mornings to it's probably best to make sure they're out on Wednesday evenings. Hopefully the neighbours will take care of it, but they sometimes forget.</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('parking')"><i class="fa fa-arrow-circle-right"></i>What if I need to park a car?</h4>
-                            <p id="parking" class="hidden-text">You can register and apply for a Visitor's Permit here: https://www.myringgo.co.uk/lewisham/home</p>
-                                                        
+                            <p id="parking" class="hidden-text">You can register and apply for a Visitor's Permit <a href="https://www.myringgo.co.uk/lewisham/home">here</a>.</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('groceries')"><i class="fa fa-arrow-circle-right"></i>Where should I get groceries?</h4>
+                            <p id="groceries" class="hidden-text">Sample Text <a href="#">Temp Link</a>.</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('finding')"><i class="fa fa-arrow-circle-right"></i>Do you have...?</h4>
+                            <p id="finding" class="hidden-text">If it's not in <a href="#findingStuff" onclick="panelFlash('findingStuff')">this list</a>, WhatsApp us!</p>
                         </div><!--//panel-body-->
-                    </div><!--//panel panel-info-->
-                </div><!--//col-sm6 col-md-4-->
-                
-                <div class="col-sm6 col-md-4">
-                    <div class="panel panel-info">
+                    </div><!--//The Flat (panel panel-info)-->
+                    
+                    <div class="panel panel-info"><!--Entertainment (panel panel-info)-->
                         <div class="panel-heading">
-                            <h3 class="panel-title">Title</h3>
+                            <h3 class="panel-title">Entertainment</h3>
                         </div><!--//panel-heading-->
                         <div class="panel-body">
-                            <p>Sample Text</p>
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('wifiPass')"><i class="fa fa-arrow-circle-right"></i>What's the Wi-Fi password again?</h4>
+                            <p id="wifiPass" class="hidden-text">The WIFI password is Ben's phone number! If you've forgotten that look at the post-it under the keyboard!</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('wifiType')"><i class="fa fa-arrow-circle-right"></i>What's the difference between MoBeen & MoBeen 2.4?</h4>
+                            <p id="wifiType" class="hidden-text">MoBeen will be faster & more reliable than MoBeen 2.4, so you should always connect to that one if you can.
+                            <br><br>Older devices might not be able to connect to MoBeen which is why we also have MoBeen 2.4.
+                            <br><br>You can read about different Wi-Fi frequencies (5GHz vs 2.4GHz) <a href="http://pocketnow.com/2014/01/23/5ghz-wifi">here</a> if you want to sound smart in front of guests!</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('amazonFire')"><i class="fa fa-arrow-circle-right"></i>Tell me about this Amazon Fire TV...</h4>
+                            <p id="amazonFire" class="hidden-text">Sample Text</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('kodi')"><i class="fa fa-arrow-circle-right"></i>How do I watch the other films & TV shows you have?</h4>
+                            <p id="kodi" class="hidden-text">Sample Text</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('tvAerial')"><i class="fa fa-arrow-circle-right"></i>The TV signal is dodgy! How do I fix it?</h4>
+                            <p id="tvAerial" class="hidden-text">Sample Text</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('wii')"><i class="fa fa-arrow-circle-right"></i>I wanna play Wii!</h4>
+                            <p id="wii" class="hidden-text">The power cable is kept in the bookcase. The TV connector and sensor bar wires will be hanging down by the Wii. To successfully plug all the wires in you'll need to prop the Wii up with a few books.</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('pc')"><i class="fa fa-arrow-circle-right"></i>There is something up with the computer/I can't access films on Kodi!</h4>
+                            <p id="pc" class="hidden-text">Sample Text</p>
                         </div><!--//panel-body-->
-                    </div><!--//panel panel-info-->
-                </div><!--//col-sm6 col-md-4-->
-                
-                <div class="col-sm6 col-md-4">
-                    <div class="panel panel-info">
+                    </div><!--//Entertainment (panel panel-info)-->
+                    
+                    <div class="panel panel-info"><!--Pippi (panel panel-info)-->
                         <div class="panel-heading">
-                            <h3 class="panel-title">Title</h3>
+                            <h3 class="panel-title">Pippi</h3>
                         </div><!--//panel-heading-->
                         <div class="panel-body">
-                            <p>Sample Text</p>
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('pippiFood')"><i class="fa fa-arrow-circle-right"></i>What does she eat?</h4>
+                            <p id="pippiFood" class="hidden-text">Pippi's favourite meal is a handful of crunchies mixed with a packet of Whiskers. On top of this she can have two or three more packets of wet food depending on how hungry she ends up being!</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('pippiBrush')"><i class="fa fa-arrow-circle-right"></i>How does her fur stay so soft & beautiful?</h4>
+                            <p id="pippiBrush" class="hidden-text">We brush her and you better be doing it too! She likes being brushed so it's an easy way to get her to like you!</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('pippi')"><i class="fa fa-arrow-circle-right"></i>Why is she going mental at 10pm?!</h4>
+                            <p id="pippi" class="hidden-text">She sleeps all day & parties all night! Just make sure she has some scrunchies to play football with and she wont bother you whilst you sleep.
+                            <br><br>If she starts scratching at the bedroom window she's probably hungry.</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('pippi')"><i class="fa fa-arrow-circle-right"></i>Sample Question</h4>
+                            <p id="pippi" class="hidden-text">Sample Text</p>
                         </div><!--//panel-body-->
-                    </div><!--//panel panel-info-->
-                </div><!--//col-sm6 col-md-4-->
+                    </div><!--//Pippi (panel panel-info)-->
+                 </div><!--//col-sm-6 col-md-4-->
+                
+                <div class="col-sm-6 col-md-4">
+                    <div class="panel panel-info"><!--Cooking & Cleaning (panel panel-info)-->
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Cooking & Cleaning</h3>
+                        </div><!--//panel-heading-->
+                        <div class="panel-body">
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('washingMachine')"><i class="fa fa-arrow-circle-right"></i>Washing Machine</h4>
+                            <p id="washingMachine" class="hidden-text">We normally run the washing machine on the 'Time Saver' setting. It's a quick wash at 30° - good for clothes, the environment and people in a rush!
+                            <br><br>If you want to get a head start on drying the clothes use the 'Spin' setting. We keep the drying rack is kept behind the Kitchen door.
+                            <br><br>Don't forget to use the ***SMELLY THINGS***</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Sample Question</h4>
+                            <p id="sample" class="hidden-text">Sample Text</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Sample Question</h4>
+                            <p id="sample" class="hidden-text">Sample Text</p>
+                        </div><!--//panel-body-->
+                    </div><!--//Cooking & Cleaning (panel panel-info)-->
+                    
+                    <div class="panel panel-info"><!--Finding Stuff (panel panel-info)-->
+                        <div class="panel-heading" id="findingStuff">
+                            <h3 class="panel-title">Finding Stuff</h3>
+                        </div><!--//panel-heading-->
+                        <div class="panel-body">
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('findBatteries')"><i class="fa fa-arrow-circle-right"></i>Batteries or candles?</h4>
+                            <p id="findBatteries" class="hidden-text">In the white basket, on the top shelf, of the Billy Bookcase in the lounge! There's a mix of AA & AAA batteries in there and enough candles to get you through a power cut!</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('findLinen')"><i class="fa fa-arrow-circle-right"></i>Spare sheets, bedding or towels?</h4>
+                            <p id="findLinen" class="hidden-text">Sheets are kept on the top shelf in Maureen's closet. Be careful of Shirley - she gets quite territorial over them!
+                            <br><br>Bedding can be found in the cupboard above Ben's closet or hidden away in the sofa-bed.
+                            <br><br>Spare towels are on the back of the bathroom door and on the lower shelves in Ben's closet.</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('findCleaning')"><i class="fa fa-arrow-circle-right"></i>Stuff for cleaning?</h4>
+                            <p id="findCleaning" class="hidden-text">Sample Text</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('findKitchen')"><i class="fa fa-arrow-circle-right"></i>Cutlery and other kitcheny stuff?</h4>
+                            <p id="findKitchen" class="hidden-text">Pretty much everything you'll need is in the cupboards under the sink and the microwave!
+                            <br><br>The rice cooker & spare kitchen roll are kept up high on top of the high cupboards.
+                            <br><br>The George Foreman grill is kept on a makeshift shelf behind the bin.</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Sample</h4>
+                            <p id="sample" class="hidden-text">Sample Text</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Sample</h4>
+                            <p id="sample" class="hidden-text">Sample Text</p>
+                            
+                            <p id="sample" class="hidden-text">Sample Text</p>
+                        </div><!--//panel-body-->
+                    </div><!--//Finding Stuff (panel panel-info)-->
+                    
+                    <div class="panel panel-info"><!--Fun Stuff To Do!(panel panel-info)-->
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Fun Stuff To Do</h3>
+                        </div><!--//panel-heading-->
+                        <div class="panel-body">
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Picnic!</h4>
+                            <p id="sample" class="hidden-text">Sample Text</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Cycling</h4>
+                            <p id="sample" class="hidden-text">Sample Text</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Blackheath</h4>
+                            <p id="sample" class="hidden-text">Sample Text</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Greenwich Park</h4>
+                            <p id="sample" class="hidden-text">Sample Text</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('modelMarket')"><i class="fa fa-arrow-circle-right"></i>Lewisham Model Market</h4>
+                            <p id="modelMarket" class="hidden-text">The Model Market is a fun little street food market with some good drinks and a nice atmosphere on a warm evening. It's open 5pm-1am on Friday's & Saturdays, with free entry before 7pm & £3 after.
+                            <br><br>It isn't fantastically cheap with standard London prices for drinks & food being a little bit more expensive than Borough market for food at £5-8.
+                            <br><br>The model market is at 196 Lewisham High Street, Lewisham, London, SE13 6LS. It's easiest to describe as being at the back of Primark or Wetherspoons. If you can't find it just follow the hipsters.
+                            <br><br>Check <a href="http://www.streetfeastlondon.com/where/model-market">here</a> for more information and a mini-map of where it is.</p>
+                        </div><!--//panel-body-->
+                    </div><!--//Fun Stuff To Do!(panel panel-info)-->
+                </div><!--//col-sm-6 col-md-4-->
+                
+                <div class="col-sm-6 col-md-4">
+                    <div class="panel panel-warning"><!--Trip Info (panel panel-info)-->   
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Trip Info</h3>
+                        </div><!--//panel-heading-->
+                        <div class="panel-body">
+                            <p id="sample">18th July - Flight from London to St Louis.
+                            <br>19th July to 25th July - Austin
+                            <br></p>
+                        </div><!--//panel-body-->
+                    </div><!--//Trip Info (panel panel-info)-->               
+                </div><!--//col-sm-6 col-md-4-->
                 
             </div><!--//row-->
         </div><!--//container-->
