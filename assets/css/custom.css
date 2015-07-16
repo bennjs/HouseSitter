@@ -30,6 +30,11 @@ body {
     border-bottom-right-radius: 10px;
     padding: 0.5em;
 }
+.row .app-download-images {
+    padding: 12px;
+    vertical-align: middle;
+    width: 130px;
+}
 #original-panel {
     color: #31708f;
     background-color: #d9edf7;
