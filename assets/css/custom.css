@@ -8,21 +8,30 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+h1,
+h2,
+h3 { /* Bold or not?*/
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #778492;
+}
+
+/* ==== Header ==== */
 .header {
     padding: 30px 0;
     background: #f5f5f5;
     border-top: 10px solid #778492;
 }
 .header .header-image {
-    margin-right: 30px;
+    margin-right: 21px;
 }
 .header .header-content .title {
     color: #49515a;
     font-size: 38px;
-    margin-bottom: 5px;
+    margin-bottom: 9px; /* was 5 */
     margin-top: 30px;
 }
-.trip-status {
+.header .header-content .trip-status {
     background: #DAE8EF;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -34,6 +43,13 @@ body {
     padding: 12px;
     vertical-align: middle;
     width: 125px;
+}
+.kodi-logo {
+    padding-top:5px;
+    padding-bottom:5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #original-panel {
     color: #31708f;
@@ -70,3 +86,22 @@ body {
     font-size: 12px;
     text-align: center;
 }
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+  .header {
+    text-align: center;
+  }
+  .header .header-image {
+    float: none !important;
+    margin: 0 auto;
+  }
+  .header .header-content {
+    float: none !important;
+    text-align: center;
+  }
+ }
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1360px;
+  }

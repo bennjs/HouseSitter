@@ -20,7 +20,7 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
         <!-- Bootstrap CSS -->
-        <link href="assets/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	
         <!-- Font-Awesome CSS -->
         <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -38,12 +38,9 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
             <div class="container">
                 <img class="header-image img-responsive pull-left" src="assets/images/churchHeader.png" alt="Blackheath Church"/>
                 <div class="header-content pull-left">
-                    <h1 class="title" id="hello">Hello, House Sitter!</h1>
-                    <!--<input type="button" name ="helloButton" onclick="tripStatus()" value="Click to say hello!">-->
-                    <div class="whereAreThey">
-                        <p id="tripStatus" class="trip-status"></p>
-                        <!--<p id="debug"></p>-->
-                    </div><!--//whereAreThey-->
+                    <h1 class="title">Hello, House Sitter!</h1>
+                    <p id="tripStatus" class="trip-status"></p>
+                    <!--<p id="debug"></p>-->
                 </div><!--//header-content-->
             </div><!--//container-->
         </header><!--//header-->
@@ -85,7 +82,8 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                         </div><!--//panel-heading-->
                         <div class="panel-body">
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('wifiPass')"><i class="fa fa-arrow-circle-right"></i>What's the Wi-Fi password again?</h4>
-                            <p id="wifiPass" class="hidden-text">The WIFI password is Ben's phone number! If you've forgotten that look at the post-it under the keyboard!</p>
+                            <p id="wifiPass" class="hidden-text">The WIFI password is Ben's phone number!
+                            <br><br>If you've forgotten that look at the post-it under the keyboard!</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('wifiType')"><i class="fa fa-arrow-circle-right"></i>What's the difference between MoBeen & MoBeen 2.4?</h4>
                             <p id="wifiType" class="hidden-text">MoBeen will be faster & more reliable than MoBeen 2.4, so you should always connect to that one if you can.
@@ -93,16 +91,23 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                             <br><br>You can read about different Wi-Fi frequencies (5GHz vs 2.4GHz) <a href="http://pocketnow.com/2014/01/23/5ghz-wifi">here</a> if you want to sound smart in front of guests!</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('amazonFire')"><i class="fa fa-arrow-circle-right"></i>Tell me about this Amazon Fire TV...</h4>
-                            <p id="amazonFire" class="hidden-text">Sample Text</p>
+                            <p id="amazonFire" class="hidden-text">We have a Fire TV in the lounge and a Fire TV Stick in the bedroom.
+                            <br><img class="kodi-logo" src="assets/images/prime-flag.png" alt="Kodi Logo">
+                            Anything with the Prime flag in the top left is free to stream. Woo!
+                            <br><br><b>FUN FACT: </b>If you start watching a film in the lounge but want to finish it in bed, it'll sync to where you left off Wowzers!</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('kodi')"><i class="fa fa-arrow-circle-right"></i>How do I watch the other films & TV shows you have?</h4>
-                            <p id="kodi" class="hidden-text">Sample Text</p>
+                            <p id="kodi" class="hidden-text">If you boot up the Fire TV there will be an icon on the Home Page (under the Recent tab) that looks like this:
+                            <img class="kodi-logo" src="assets/images/kodi-sm.png" alt="Kodi Logo"/>
+                            When you click it you'll be taken to the Kodi Desktop. Then you just need to navigate either Films or TV by Title.
+                            <br><br>Unfortunately voice search wont work here!</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('tvAerial')"><i class="fa fa-arrow-circle-right"></i>The TV signal is dodgy! How do I fix it?</h4>
                             <p id="tvAerial" class="hidden-text">Sample Text</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('wii')"><i class="fa fa-arrow-circle-right"></i>I wanna play Wii!</h4>
-                            <p id="wii" class="hidden-text">The power cable is kept in the bookcase. The TV connector and sensor bar wires will be hanging down by the Wii. To successfully plug all the wires in you'll need to prop the Wii up with a few books.</p>
+                            <p id="wii" class="hidden-text">The power cable is kept in the bookcase. The TV connector and sensor bar wires will be hanging down by the Wii.
+                            <br><br>To successfully plug all the wires in you'll need to prop the Wii up with a few books.</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('pc')"><i class="fa fa-arrow-circle-right"></i>There is something up with the computer/I can't access films on Kodi!</h4>
                             <p id="pc" class="hidden-text">Sample Text</p>
@@ -236,6 +241,7 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
     
         <!-- Load JavaScript Sources -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="assets/bootstrap/jsbootstrap.min.js"></script>
         <script src="assets/js/main.js"></script>
     
     </body>
