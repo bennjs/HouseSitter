@@ -38,18 +38,20 @@ h3 { /* Bold or not?*/
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     padding: 0.5em;
+    display: inline-block;
 }
 .row .app-download-images {
-    padding: 12px;
-    vertical-align: middle;
-    width: 125px;
+    padding: 5px;
+    width: 115px;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
 }
-.kodi-logo {
+.answer-image { /* For images in the <p> of the response to the subtitles/questions */
     padding-top:5px;
     padding-bottom:5px;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 #original-panel {
     color: #31708f;

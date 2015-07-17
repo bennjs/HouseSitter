@@ -31,7 +31,7 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
     
     </head>
 	
-    <body onload="tripStatus();">
+    <body onload="tripStatus(); parkOpeningHours();">
     
         <!-- ******HEADER****** -->
         <header class="header">
@@ -57,7 +57,8 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                         </div><!--//panel-heading-->
                         <div class="panel-body">
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('landlordContact')"><i class="fa fa-arrow-circle-right"></i>Who's the landlord and what happens if I need to get in contact with him?</h4>
-                            <p id="landlordContact" class="hidden-text">The landlord's name is Ade (Pronounced: Addie) Jimoh. His number is 0758017905.</p>
+                            <p id="landlordContact" class="hidden-text">The landlord's name is Ade (Pronounced: Addie) Jimoh.
+                            <br><br>His number is 0758017905.</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('binDay')"><i class="fa fa-arrow-circle-right"></i>When do the bins need taking out?</h4>
                             <p id="binDay" class="hidden-text">The bins are collected early on Thursday mornings so it's probably best to make sure they're out on Wednesday evenings.
@@ -65,14 +66,14 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('parking')"><i class="fa fa-arrow-circle-right"></i>What if I need to park a car?</h4>
                             <p id="parking" class="hidden-text">You can register and apply for a Visitor's Permit <a href="https://www.myringgo.co.uk/lewisham/home">here</a> or by using the RingGo app.
-                            <br><br><a  href="http://itunes.apple.com/gb/app/ringgo/id342898717?mt=8"><img class="app-download-images" src="assets/images/downloadios.png" alt="Download iPhone App"/></a>
-                                            <a  href="https://market.android.com/details?id=co.uk.ringgo.android"><img class="app-download-images" src="assets/images/downloadandroid.png" alt="Download Android App"/></a></p>
-                            
+                                <br><br>
+                                    <a  href="http://itunes.apple.com/gb/app/ringgo/id342898717?mt=8"><img class="app-download-images" src="assets/images/downloadios.png" alt="Download iPhone App"/></a>
+                                    <a  href="https://market.android.com/details?id=co.uk.ringgo.android"><img class="app-download-images" src="assets/images/downloadandroid.png" alt="Download Android App"/></a></p>
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('groceries')"><i class="fa fa-arrow-circle-right"></i>Where should I get groceries?</h4>
                             <p id="groceries" class="hidden-text">Sample Text <a href="#">Temp Link</a>.</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('finding')"><i class="fa fa-arrow-circle-right"></i>Do you have...?</h4>
-                            <p id="finding" class="hidden-text">If it's not in <a href="#findingStuff" onclick="panelFlash('findingStuff')">this list</a>, WhatsApp us!</p>
+                            <p id="finding" class="hidden-text">If it's not in <a href="#findingStuff">this list</a>, WhatsApp us!</p>
                         </div><!--//panel-body-->
                     </div><!--//The Flat (panel panel-info)-->
                     
@@ -83,7 +84,7 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                         <div class="panel-body">
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('pippiFood')"><i class="fa fa-arrow-circle-right"></i>What does she eat?</h4>
                             <p id="pippiFood" class="hidden-text">Pippi's favourite meal is a handful of crunchies mixed with a packet of Whiskers.
-                            <br><br>She can have two or three more packets of wet food depending on how hungry she ends up being but don't let her guilt you into giving her crunchies!</p>
+                            <br><br>She can have up to four packets of wet food depending on how hungry she ends up being but don't let her guilt you into giving her extra crunchies!</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('pippiBrush')"><i class="fa fa-arrow-circle-right"></i>How does her fur stay so soft & beautiful?</h4>
                             <p id="pippiBrush" class="hidden-text">We brush her and you better be doing it too! She likes being brushed so it's an easy way to get her to like you!</p>
@@ -92,8 +93,8 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                             <p id="pippi" class="hidden-text">She sleeps all day & parties all night! Just make sure she has some scrunchies to play football with and she wont bother you whilst you sleep.
                             <br><br>If she starts scratching at the bedroom window she's probably hungry.</p>
                             
-                            <h4 class="subtitle-toggle" onclick="toggleVisibility('pippi')"><i class="fa fa-arrow-circle-right"></i>Sample Question</h4>
-                            <p id="pippi" class="hidden-text">Sample Text</p>
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('pippiPics')"><i class="fa fa-arrow-circle-right"></i>How many pictures a day do I need to take?</h4>
+                            <p id="pippiPics" class="hidden-text">All of the pictures, all of the days!</p>
                         </div><!--//panel-body-->
                     </div><!--//Pippi (panel panel-info)-->
                  </div><!--//col-sm-6 col-md-4-->
@@ -114,21 +115,20 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                             <br><br>Spare towels are on the back of the bathroom door and on the lower shelves in Ben's closet.</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('findCleaning')"><i class="fa fa-arrow-circle-right"></i>Stuff for cleaning?</h4>
-                            <p id="findCleaning" class="hidden-text">Sample Text</p>
+                            <p id="findCleaning" class="hidden-text">The main host of cleaning supplies is in the cupboard under the sink. It's where you'll find all manner of sprays, clothes and laundry supplies.
+                            <br><br>For sweeping and chasing Pippi there's a broom behind the kitchen door and a Zoom-Zoom by the bed.</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('findKitchen')"><i class="fa fa-arrow-circle-right"></i>Cutlery and other kitcheny stuff?</h4>
                             <p id="findKitchen" class="hidden-text">Pretty much everything you'll need is in the cupboards under the sink and the microwave!
-                            <br><br>The rice cooker & spare kitchen roll are kept up high on top of the high cupboards.
+                            <br><br>The rice cooker & spare kitchen roll are kept up on top of the high cupboards.
                             <br><br>The George Foreman grill is kept on a makeshift shelf behind the bin.</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('findTea')"><i class="fa fa-arrow-circle-right"></i>Can I have a cuppa?</h4>
                             <p id="findTea" class="hidden-text">Green? Green with Peach & Apricot? Chai? Cherry & Cinamon? Ginger? Plain old Tetleys?
-                            <br><br>There's a small set of drawers down next to the sink. You'll find our collection in the bottom two drawers. How delightful!</p>
+                            <br><br>There's a small set of drawers down next to the sink. You'll find our collection of teas in the bottom two drawers. How delightful!</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('findPicnic')"><i class="fa fa-arrow-circle-right"></i>Picnic games?</h4>
                             <p id="findPicnic" class="hidden-text">Sample Text</p>
-                            
-                            <p id="sample" class="hidden-text">Sample Text</p>
                         </div><!--//panel-body-->
                     </div><!--//Finding Stuff (panel panel-info)-->
                     
@@ -137,20 +137,28 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                             <h3 class="panel-title">Fun Stuff To Do</h3>
                         </div><!--//panel-heading-->
                         <div class="panel-body">
-                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Picnic!</h4>
-                            <p id="sample" class="hidden-text">Sample Text</p>
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('doPicnic')"><i class="fa fa-arrow-circle-right"></i>Picnic!</h4>
+                            <p id="doPicnic" class="hidden-text">Yay for picnics!
+                            <br><br>Where's all the picnic stuff you ask? Find out <a href="#findingStuff" onclick="toggleVisibility('findPicnic')">here</a>.</p>
                             
-                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Cycling</h4>
-                            <p id="sample" class="hidden-text">Sample Text</p>
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('doCycling')"><i class="fa fa-arrow-circle-right"></i>Cycling!</h4>
+                            <p id="doCycling" class="hidden-text">On the back of Ben's closet door there's a purple Greenwich bag. In it you'll find the bike lock keys and some tools.
+                            <br><br>The bike should be all fine and dandy but you might wanna check it before riding of into the distance.
+                            <br><br>Just remember the wheel and frame are locked together when you lock it up as I'm quite attached to my wheels!</p>
                             
-                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Blackheath</h4>
-                            <p id="sample" class="hidden-text">Sample Text</p>
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('doBlackheath')"><i class="fa fa-arrow-circle-right"></i>Blackheath!</h4>
+                            <p id="doBlackheath" class="hidden-text">Isn't Blackheath the nicest?!
+                            <br><br>Perfect for running
+                            <br><br>On Sundays there's a farmers market in the station car park.</p>
                             
-                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Greenwich Park</h4>
-                            <p id="sample" class="hidden-text">Sample Text</p>
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('doGrenPark')"><i class="fa fa-arrow-circle-right"></i>Greenwich Park!</h4>
+                            <p id="doGrenPark" class="hidden-text">There's lots to do in the park and it's open every day between 06:00 & parkCloseTime
+                            <br><br>
+                            <br><br>Check out the map <a href="https://www.royalparks.org.uk/parks/greenwich-park/map-of-greenwich-park">here</a>.
+                            <br><br><b>FUN FACT: </b>Greenwich Park is the oldest enclosed Royal Park and covers 183 acres!</p>
                             
-                            <h4 class="subtitle-toggle" onclick="toggleVisibility('modelMarket')"><i class="fa fa-arrow-circle-right"></i>Lewisham Model Market</h4>
-                            <p id="modelMarket" class="hidden-text">The Model Market is a fun little street food market with some good drinks and a nice atmosphere on a warm evening. It's open 5pm-1am on Friday's & Saturdays, with free entry before 7pm & £3 after.
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('doModelMarket')"><i class="fa fa-arrow-circle-right"></i>Lewisham Model Market!</h4>
+                            <p id="doMmodelMarket" class="hidden-text">The Model Market is a fun little street food market with some good drinks and a nice atmosphere on a warm evening. It's open 5pm-1am on Friday's & Saturdays, with free entry before 7pm & £3 after.
                             <br><br>It isn't fantastically cheap with standard London prices for drinks & food being a little bit more expensive than Borough market for food at £5-8.
                             <br><br>The model market is at 196 Lewisham High Street, Lewisham, London, SE13 6LS. It's easiest to describe as being at the back of Primark or Wetherspoons. If you can't find it just follow the hipsters.
                             <br><br>Check <a href="http://www.streetfeastlondon.com/where/model-market">here</a> for more information and a mini-map that may or may not help.</p>
@@ -175,18 +183,22 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('amazonFire')"><i class="fa fa-arrow-circle-right"></i>Tell me about this Amazon Fire TV...</h4>
                             <p id="amazonFire" class="hidden-text">We have a Fire TV in the lounge and a Fire TV Stick in the bedroom.
-                            <br><img class="kodi-logo" src="assets/images/prime-flag.png" alt="Kodi Logo">
+                            <br><img class="answer-image" src="assets/images/prime-flag.png" alt="FireTV Flag">
                             Anything with the Prime flag in the top left is free to stream. Woo!
+                            <br><br>Along with the rather awesome voice search you'll also be able to use apps like the BBC iPlayer or Netflix and games like Minion Rush!
                             <br><br><b>FUN FACT: </b>If you start watching a film in the lounge but want to finish it in bed, it'll sync to where you left off! Wowzers!</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('kodi')"><i class="fa fa-arrow-circle-right"></i>How do I watch the other films & TV shows you have?</h4>
                             <p id="kodi" class="hidden-text">If you boot up the Fire TV there will be an icon on the Home Page (under the Recent tab) that looks like this:
-                            <img class="kodi-logo" src="assets/images/kodi-sm.png" alt="Kodi Logo"/>
+                            <img class="answer-image" src="assets/images/kodi-sm.png" alt="Kodi Logo"/>
                             When you click it you'll be taken to the Kodi Desktop. Then you just need to navigate either Films or TV by Title.
                             <br><br>Unfortunately voice search wont work here!</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('tvAerial')"><i class="fa fa-arrow-circle-right"></i>The TV signal is dodgy! How do I fix it?</h4>
-                            <p id="tvAerial" class="hidden-text">Sample Text</p>
+                            <p id="tvAerial" class="hidden-text">The aerial can be a little finicky and is prone to attack by Pippi.
+                            <img class="answer-image" src="assets/images/kodi-sm.png" alt="TV Aerial"/>
+                            Just put it back like this and you should be good to go.
+                            <br><br>We don't have a TV aerial for the bedroom TV but you should be able to access some live TV using the TVPlayer app on the Fire TV Stick.<p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('wii')"><i class="fa fa-arrow-circle-right"></i>I wanna play Wii!</h4>
                             <p id="wii" class="hidden-text">The power cable is kept in the bookcase. The TV connector and sensor bar wires will be hanging down by the Wii.
@@ -204,14 +216,19 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                         <div class="panel-body">
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('washingMachine')"><i class="fa fa-arrow-circle-right"></i>Washing Machine</h4>
                             <p id="washingMachine" class="hidden-text">We normally run the washing machine on the 'Time Saver' setting. It's a quick wash at 30° - good for clothes, the environment and people in a rush!
-                            <br><br>If you want to get a head start on drying the clothes use the 'Spin' setting. We keep the drying rack is kept behind the Kitchen door.
-                            <br><br>Don't forget to use the ***SMELLY THINGS***</p>
+                            <br><br>If you want to get a head start on drying the clothes use the 'Spin' setting. The drying rack is kept behind the Kitchen door.
+                            <br><br>Don't forget to use the Lenor Unstoppable to make your clothes smell all scrumptious and that!</p>
                             
-                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Sample Question</h4>
-                            <p id="sample" class="hidden-text">Sample Text</p>
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('kitchenStuff')"><i class="fa fa-arrow-circle-right"></i>Kitchen stuff!</h4>
+                            <p id="kitchenStuff" class="hidden-text">As you probably know how to use an oven and microwave there isn't much to say here!
+                            <br><br>We do have a microwaveable rice cooker that's kept above the top cupboards. If you're going to cook rice or grains in it there's a handy chart on the fridge door that'll tell you the correct ratios and cooking time.
+                            <br><br>You can also use it to steam vegetables! Just chuck a load in, add a little bit of water to act as a paddling pool and sling it in the microwave for 2:30-3:30mins depending on how you like your veg. We have plenty of frozen veg and brocoli for you to eat!
+                            <br><br>To find things like cutelry, tin foil etc <a href="#findingStuff" onclick="toggleVisibility('findKitchen')">click here</a>.
+                            <br><br><b>CAUTION:</b> Hot things can be hot!</p>
                             
-                            <h4 class="subtitle-toggle" onclick="toggleVisibility('sample')"><i class="fa fa-arrow-circle-right"></i>Sample Question</h4>
-                            <p id="sample" class="hidden-text">Sample Text</p>
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('cleaning')"><i class="fa fa-arrow-circle-right"></i>Cleaning stuff!</h4>
+                            <p id="cleaning" class="hidden-text">Pippi doesn't really shed, so there doesn't end up being too much cleaning that needs to get done.
+                            <br><br>If you want to know where everything's kept just <a href="#findingStuff" onclick="toggleVisibility('findCleaning')">click here</a>.</p>
                         </div><!--//panel-body-->
                     </div><!--//Cooking & Cleaning (panel panel-info)-->                    
                 </div><!--//col-sm-6 col-md-4-->
@@ -224,7 +241,7 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                     <ul class="content list-inline">
                         <li><a href="https://twitter.com/bennjs"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="http://uk.linkedin.com/in/bnjstokes"><i class="fa fa-linkedin"></i></a></li>
-                        <li><a href="https://github.com/bennjs/"><i class="fa fa-github-alt"></i></a></li>
+                        <li><a href="https://github.com/bennjs/"><i class="fa fa-github-alt"></i></a></li>                        
                     </ul>
                 </div><!--//footer-->
             </footer>

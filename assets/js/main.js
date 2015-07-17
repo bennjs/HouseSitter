@@ -10,6 +10,38 @@ function toggleVisibility(id) {
     }
 }
 
+function parkOpeningHours() {
+    var time;
+    
+    switch (new Date().getMonth()) {
+        case 0:
+        case 1:
+        case 10:
+        case 11:
+            time = "18:00.";
+            break;
+        case 2:
+            time = "19:00(18:00 from the start of BST).";
+            break;
+        case 3:
+        case 8:
+            time = "20:00.";
+            break;
+        case 4:
+        case 7:
+            time = "21:00.";
+            break;
+        case 5:
+        case 6:
+            time = "21:30.";
+            break;
+        case 9:
+            time = "19:00 (18:00 from the end of BST)."
+    }
+    
+    document.body.innerHTML = document.body.innerHTML.replace('parkCloseTime', time);
+}
+
 // tripStatus() uses the time and date in the UK (where it's most likely to be accessed) to update
 // the trip-status <p> in the HEADER with information about where we are and when we fly.
 function tripStatus() {
@@ -42,13 +74,13 @@ function tripStatus() {
             div.innerHTML= hu + "We're flying today at 12:05 (UK)!";
         }
         else if ((time >= '12:05') && (time < '20:15')) {
-            div.innerHTML= hu + intro + "flying from London to Washington Dulles!<br><i class=\"fa fa-plane\"></i><a href=\"https://www.google.co.uk/search?q=UA919\">Track the flight!</a>"; //UA919
+            div.innerHTML= hu + intro + "flying from London to Washington Dulles!<br><i class=\"fa fa-plane\"></i><a href=\"https://www.google.co.uk/search?q=UA919\"> Track the flight!</a>"; //UA919
         }
         else if (time > '23:53') {
             div.innerHTML= hu + "We're in St Louis!";
         }
         else {
-            div.innerHTML= hu + intro + "flying between Washington Dulles & St Louis!<br><i class=\"fa fa-plane\"></i><a href=\"https://www.google.co.uk/search?q=UA3434\">Track the flight!</a>"; //UA3434
+            div.innerHTML= hu + intro + "flying between Washington Dulles & St Louis!<br><i class=\"fa fa-plane\"></i><a href=\"https://www.google.co.uk/search?q=UA3434\"> Track the flight!</a>"; //UA3434
         }
     }
     // Flight from STL --> AUSTIN - WN3054 (South West)
@@ -60,7 +92,7 @@ function tripStatus() {
             div.innerHTML= hu + "We're in Austin!";
         }
         else {
-            div.innerHTML= hu +  intro + "flying between St Louis & Austin!<br><i class=\"fa fa-plane\"></i><a href=\"https://www.google.co.uk/search?q=WN3054\">Track the flight!</a>";
+            div.innerHTML= hu +  intro + "flying between St Louis & Austin!<br><i class=\"fa fa-plane\"></i><a href=\"https://www.google.co.uk/search?q=WN3054\"> Track the flight!</a>";
         }
     }
     // Our stay in Austin - 19th - 26th
@@ -82,7 +114,7 @@ function tripStatus() {
             div.innerHTML= hu + "We're in St Louis!";
         }
         else {
-            div.innerHTML= hu +  intro + "flying between Austin & St Louis!<br><i class=\"fa fa-plane\"></i><a href=\"https://www.google.co.uk/search?q=WN2876\">Track the flight!</a>";
+            div.innerHTML= hu +  intro + "flying between Austin & St Louis!<br><i class=\"fa fa-plane\"></i><a href=\"https://www.google.co.uk/search?q=WN2876\"> Track the flight!</a>";
         }
     }
     
@@ -94,13 +126,13 @@ function tripStatus() {
             div.innerHTML= hu + "We're flying today at 00:35 (UK)!";
         }
         else if ((time >= '00:35') && (time > '01:57')) {
-             intro + "flying from St Louis to Chicago!<br><i class=\"fa fa-plane\"></i><a href=\"https://www.google.co.uk/search?q=UA3705\">Track the flight!</a>"; //UA3705
+             intro + "flying from St Louis to Chicago!<br><i class=\"fa fa-plane\"></i><a href=\"https://www.google.co.uk/search?q=UA3705\"> Track the flight!</a>"; //UA3705
         }
         else if (time > '01:57') {
             div.innerHTML= hu + "We're in Chicago!";
         }
         else {
-            div.innerHTML= hu +  intro + "flying between Chicago & London!<br><i class=\"fa fa-plane\"></i><a href=\"https://www.google.co.uk/search?q=UA938\">Track the flight!</a>" //UA938
+            div.innerHTML= hu +  intro + "flying between Chicago & London!<br><i class=\"fa fa-plane\"></i><a href=\"https://www.google.co.uk/search?q=UA938\"> Track the flight!</a>" //UA938
         }
      }
     
