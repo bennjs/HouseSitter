@@ -23,7 +23,7 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
         <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	
         <!-- Font-Awesome CSS -->
-        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 	
         <!-- Custom CSS -->
         <link href="assets/css/custom.css" rel="stylesheet">
@@ -50,7 +50,7 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
         <!-- ******PANELS****** -->
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-4">
+                <div class="col-md-4">
                     <div class="panel panel-info"><!--The Flat (panel panel-info)-->
                         <div class="panel-heading">
                             <h3 class="panel-title">The Flat</h3>
@@ -69,8 +69,12 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                                 <br><br>
                                     <a  href="http://itunes.apple.com/gb/app/ringgo/id342898717?mt=8"><img class="app-download-images" src="assets/images/downloadios.png" alt="Download iPhone App"/></a>
                                     <a  href="https://market.android.com/details?id=co.uk.ringgo.android"><img class="app-download-images" src="assets/images/downloadandroid.png" alt="Download Android App"/></a></p>
+                            
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('groceries')"><i class="fa fa-arrow-circle-right"></i>Where should I get groceries?</h4>
                             <p id="groceries" class="hidden-text">Sample Text <a href="#">Temp Link</a>.</p>
+                            
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('groceries')"><i class="fa fa-arrow-circle-right"></i>What do I need to know about the windows?</h4>
+                            <p id="groceries" class="hidden-text">Nothing really - just don't open them so wide Pippi can escape! She's a tricky one!</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('finding')"><i class="fa fa-arrow-circle-right"></i>Do you have...?</h4>
                             <p id="finding" class="hidden-text">If it's not in <a href="#findingStuff">this list</a>, WhatsApp us!</p>
@@ -97,9 +101,9 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                             <p id="pippiPics" class="hidden-text">All of the pictures, all of the days!</p>
                         </div><!--//panel-body-->
                     </div><!--//Pippi (panel panel-info)-->
-                 </div><!--//col-sm-6 col-md-4-->
+                 </div><!--//col-md-4-->
                 
-                <div class="col-sm-6 col-md-4">
+                <div class="col-md-4">
                     <div class="panel panel-info"><!--Finding Stuff (panel panel-info)-->
                         <div class="panel-heading" id="findingStuff">
                             <h3 class="panel-title">Finding Stuff</h3>
@@ -127,8 +131,9 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                             <p id="findTea" class="hidden-text">Green? Green with Peach & Apricot? Chai? Cherry & Cinamon? Ginger? Plain old Tetleys?
                             <br><br>There's a small set of drawers down next to the sink. You'll find our collection of teas in the bottom two drawers. How delightful!</p>
                             
-                            <h4 class="subtitle-toggle" onclick="toggleVisibility('findPicnic')"><i class="fa fa-arrow-circle-right"></i>Picnic games?</h4>
-                            <p id="findPicnic" class="hidden-text">Sample Text</p>
+                            <h4 class="subtitle-toggle" onclick="toggleVisibility('findPicnic')"><i class="fa fa-arrow-circle-right"></i>Stuff for a picnic?</h4>
+                            <p id="findPicnic" class="hidden-text">The picnic backpack is kept up high on top of the wardrobe. In it you'll also find travel Scrabble & Mastermind.
+                            <br><br>There's a purple University of Greenwich bag in the bottom of Ben's wardrobe which has a football, Frisbee and racket game.</p>
                         </div><!--//panel-body-->
                     </div><!--//Finding Stuff (panel panel-info)-->
                     
@@ -142,7 +147,7 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                             <br><br>Where's all the picnic stuff you ask? Find out <a href="#findingStuff" onclick="toggleVisibility('findPicnic')">here</a>.</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('doCycling')"><i class="fa fa-arrow-circle-right"></i>Cycling!</h4>
-                            <p id="doCycling" class="hidden-text">On the back of Ben's closet door there's a purple Greenwich bag. In it you'll find the bike lock keys and some tools.
+                            <p id="doCycling" class="hidden-text">On the back of Ben's closet door there's a purple University of Greenwich bag. In it you'll find the bike lock keys and some tools.
                             <br><br>The bike should be all fine and dandy but you might wanna check it before riding of into the distance.
                             <br><br>Just remember the wheel and frame are locked together when you lock it up as I'm quite attached to my wheels!</p>
                             
@@ -164,9 +169,9 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                             <br><br>Check <a href="http://www.streetfeastlondon.com/where/model-market">here</a> for more information and a mini-map that may or may not help.</p>
                         </div><!--//panel-body-->
                     </div><!--//Fun Stuff To Do!(panel panel-info)-->
-                </div><!--//col-sm-6 col-md-4-->
+                </div><!--//col-md-4-->
                 
-                <div class="col-sm-6 col-md-4">
+                <div class="col-md-4">
                     <div class="panel panel-info"><!--Entertainment (panel panel-info)-->
                         <div class="panel-heading">
                             <h3 class="panel-title">Entertainment</h3>
@@ -231,7 +236,7 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                             <br><br>If you want to know where everything's kept just <a href="#findingStuff" onclick="toggleVisibility('findCleaning')">click here</a>.</p>
                         </div><!--//panel-body-->
                     </div><!--//Cooking & Cleaning (panel panel-info)-->                    
-                </div><!--//col-sm-6 col-md-4-->
+                </div><!--//col-md-4-->
                 
             </div><!--//row-->
             
