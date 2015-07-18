@@ -1,3 +1,4 @@
+// toggles the visibility of 'answers'
 function toggleVisibility(id) {
     var e = document.getElementById(id);
     if (e.style.display == 'none' || e.style.display=='')
@@ -10,36 +11,45 @@ function toggleVisibility(id) {
     }
 }
 
+// Ensures the closing time of Greenwich Park are correct depending on the month.
 function parkOpeningHours() {
     var time;
     
     switch (new Date().getMonth()) {
-        case 0:
-        case 1:
-        case 10:
-        case 11:
+        case 0: // January
+        case 1: // February
+        case 10: // November
+        case 11: // December
             time = "18:00.";
             break;
-        case 2:
+        case 2: // March
             time = "19:00(18:00 from the start of BST).";
             break;
-        case 3:
-        case 8:
+        case 3: // April
+        case 8: // September
             time = "20:00.";
             break;
-        case 4:
-        case 7:
+        case 4: // May
+        case 7: // August
             time = "21:00.";
             break;
-        case 5:
-        case 6:
+        case 5: // June
+        case 6: // July
             time = "21:30.";
             break;
-        case 9:
+        case 9: // October
             time = "19:00 (18:00 from the end of BST)."
     }
     
     document.body.innerHTML = document.body.innerHTML.replace('parkCloseTime', time);
+}
+
+// adds a zero to the front of hours or minutes < 10
+function addZero(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
 }
 
 // tripStatus() uses the time and date in the UK (where it's most likely to be accessed) to update
@@ -57,8 +67,8 @@ function tripStatus() {
     
     // Time in H:M
     var hour, mins, time;
-    hour = today.getHours();
-    mins = today.getMinutes();
+    hour = addZero(today.getHours());
+    mins = addZero(today.getMinutes());
     time = hour + ':' + mins;
         
     var div = document.getElementById("tripStatus");
@@ -66,7 +76,7 @@ function tripStatus() {
     var intro = "We are currently ";
     var debug = "[Debug]";
     
-    // document.getElementById("debug").innerHTML= theDate; // For debugging tripStatus output in Header.
+    // document.getElementById("debug").innerHTML= hour + " " + mins + " " + time; // For debugging tripStatus output in Header.
     
     // Flight to the USA - 
     if (theDate == '18-7-2015') {

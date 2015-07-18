@@ -31,16 +31,16 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
     
     </head>
 	
-    <body onload="tripStatus(); parkOpeningHours();">
-    
+    <body onload="tripStatus(); parkOpeningHours(); randomHeaderPicture();">
+      
         <!-- ******HEADER****** -->
         <header class="header">
             <div class="container">
-                <img class="header-image img-responsive pull-left" src="assets/images/churchHeader.png" alt="Blackheath Church"/>
+                <img id="headerImage" class="header-image img-responsive pull-left" src="assets/images/churchHeader.png" alt="Blackheath Church"/>
                 <div class="header-content pull-left">
                     <h1 class="title">Hello, House Sitter!</h1>
                     <p id="tripStatus" class="trip-status"></p>
-                    <!--<p id="debug"></p>-->
+                    <!-- <p id="debug"></p> -->
                 </div><!--//header-content-->
             </div><!--//container-->
         </header><!--//header-->
@@ -162,15 +162,15 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
                             <br><br>The Heath is a large old thing and perfect for running or picnics. There are quite a few ponds dotted around on it so bonus points if you find them all!</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('doGrenPark')"><i class="fa fa-arrow-circle-right"></i>Explore Greenwich Park!</h4>
-                            <p id="doGrenPark" class="hidden-text">There's lots to do in the park and it's open every day between 06:00 & parkCloseTime
+                            <p id="doGrenPark" class="hidden-text">There's lots to do in the park and it's open every day this month between 06:00 & parkCloseTime
                             <br><br>Between the Deer enclosure, boating pond, Roman ruins and rose garden at Ranger's House there is plenty to see. To find everything check out the map <a href="https://www.royalparks.org.uk/parks/greenwich-park/map-of-greenwich-park">here</a>.
                             <br><br>There are also quite a few events throughout the summer, like live music or open-air cinema. Take a gander at the event's listing <a href="http://friendsofgreenwichpark.org.uk/index.php?page_key=ComingEvents">here</a>.
                             <br><br><b>FUN FACT: </b>Greenwich Park is the oldest enclosed Royal Park and covers 183 acres!</p>
                             
                             <h4 class="subtitle-toggle" onclick="toggleVisibility('doModelMarket')"><i class="fa fa-arrow-circle-right"></i>Visit Lewisham Model Market!</h4>
                             <p id="doModelMarket" class="hidden-text">The Model Market is a fun little street food market with some good drinks and a nice atmosphere on a warm evening. It's open 5pm-1am on Friday's & Saturdays, with free entry before 7pm & £3 after.
-                            <br><br>It isn't fantastically cheap with standard London prices for drinks & food being a little bit more expensive than Borough market for food at £5-8.
-                            <br><br>The model market is at 196 Lewisham High Street, Lewisham, London, SE13 6LS. It's easiest to describe as being at the back of Primark or Wetherspoons. If you can't find it just follow the hipsters.
+                            <br><br>It isn't fantastically cheap with standard London prices for drinks & food being a little bit more expensive than Borough market at around £5-8.
+                            <br><br>The model market is at <b>196 Lewisham High Street, SE13 6LS</b>. It's easiest to describe as being at the back of Primark or Wetherspoons. If you can't find it just follow the hipsters.
                             <br><br>Check <a href="http://www.streetfeastlondon.com/where/model-market">here</a> for more information and a mini-map that may or may not help.</p>
                         </div><!--//panel-body-->
                     </div><!--//Fun Stuff To Do!(panel panel-info)-->
@@ -269,5 +269,4 @@ About: Simple Bootstrap project as my first from scratch attempt at HTML, CSS & 
         <script src="assets/js/main.js"></script>
     
     </body>
-
 </html>
