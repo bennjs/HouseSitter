@@ -111,7 +111,7 @@ function tripStatus() {
     }
     // Our stay in STL
     else if ((theDate > '26-7-2015') && (theDate < '1-8-2015')) {
-         
+         div.innerHTML= hu + "We're in St. Louis!";
     }
     
     // Flight from AUSTIN --> STL - WN2876 (South West)
@@ -144,6 +144,10 @@ function tripStatus() {
         else {
             div.innerHTML= hu +  intro + "flying between Chicago & London!<br><i class=\"fa fa-plane\"></i><a href=\"https://www.google.co.uk/search?q=UA938\"> Track the flight!</a>" //UA938
         }
+     }
+     
+     else if (theDate > '1-8-2015') {
+         div.innerHTML= hu + "The holiday is over and we're back at <i class=\"fa fa-home\"></i>!";
      }
     
     else {
