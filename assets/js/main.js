@@ -74,9 +74,6 @@ function tripStatus() {
     var div = document.getElementById("tripStatus");
     var hu = "<b>Holiday Update:</b> "
     var intro = "We are currently ";
-    var debug = "[Debug]";
-    
-    // document.getElementById("debug").innerHTML= hour + " " + mins + " " + time; // For debugging tripStatus output in Header.
     
     // Flight to the USA - 
     if (theDate == '18-7-2015') {
@@ -154,9 +151,3 @@ function tripStatus() {
         div.innerHTML= hu + "We're in London! <i class=\"fa fa-home\"></i>";
     }
 }
-
-
-    
-    
-
-    
