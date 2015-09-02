@@ -55,43 +55,31 @@ function addZero(i) {
 // tripStatus() uses the time and date in the UK (where it's most likely to be accessed) to update
 // the trip-status <p> in the HEADER with information about where we are and when we fly.
 function tripStatus() {
-    var today;
     
-    // Days, Month & Year
-    var day, month, year;    
-    today = new Date();
-    day = today.getDate();
-    month = today.getMonth() + 1;
-    year = today.getFullYear();
-    theDate = day + '-' + month + '-' + year;
-    
-    // Time in H:M
-    var hour, mins, time;
-    hour = addZero(today.getHours());
-    mins = addZero(today.getMinutes());
-    time = hour + ':' + mins;
-        
     var div = document.getElementById("tripStatus");
     var hu = "<b>Holiday Update:</b> ";
     var intro = "We are currently ";
     
+    var today = new Date();
     
     // Section 1 - Pre-Holiday
     var departureDay = new Date('2015-7-18');
     
-    // Section 2 - Flight from London to St. Louis
+    // Section 2 - Flight from London to St. Louis & first night in St. Louis
     var londonToSTLDepart = new Date('2015-7-18 12:05:00');
     var londonToSTLArrival = new Date('2015-7-18 23:53:00');
     
     // Section 3 - Flight from St. Louis to Austin & time in Austin
-    var stlToAustin = new Date('2015-7-19 18:10:00');
+    var stlToAustinDepart = new Date('2015-7-19 18:10:00');
+    var stlToAustinArrival = new Date('2015-7-19 23:10:00');
     
     // Section 4 - Flight from Austin to St. Louis & time in St. Louis
-    var austinToSTL = new Date('2015-7-26');
+    var austinToSTLDepart = new Date('2015-7-26 19:25:00');
+    var austinToSTLArrival = new Date('2015-7-26 22:15:00');
     
     // Section 5 - Flight from St. Louis to London
-    var stlToChicago = new Date();
-    var chicagoToLondon = new Date();
+    var stlToLondonDepart = new Date('2015-8-1 00:05:00');
+    var stlToLondonArrival = new Date('2015-8-1 11:20:00');
     
     
     
@@ -99,29 +87,44 @@ function tripStatus() {
     if (today < departureDay) {
         div.innerHTML= hu + "We're flying on the 18th July at 12:05 (GMT)!";
     }
-    else if (today < londonToWashington) {
+    else if (today < londonToSTLDepart) {
         div.innerHTML= hu + "We're flying today at 12:05 (UK)!";
     }
     
-    // Section 2 - Flight from London to St. Louis
-    else if ((today >= londonToSTLDepart) && (today >= londonToSTLArrival)) {
-        div.innerHTML= hu + "flying between London & St Louis!";
+    // Section 2.1 - Flight from London to St. Louis
+    else if ((today >= londonToSTLDepart) && (today <= londonToSTLArrival)) {
+        div.innerHTML= hu + intro + "flying between London & St. Louis!";
+    }
+    
+    // Section 2.2 - First night in St. Louis
+    else if ((today > londonToSTLArrival) && (today < stlToAustinDepart)) {
+        div.innerHTML= hu + "We're enjoying our first night in St. Louis!";
     }
     
     // Section 3.1 - Flight from St. Louis to Austin
-    
+    else if ((today > stlToAustinDepart) && (today < stlToAustinArrival)) {
+        div.innerHTML= hu + intro + "flying between St. Louis & Austin!";
+    }
     
     // Section 3.2 - Time in Austin
+    else if ((today > stlToAustinArrival) && (today < austinToSTLDepart)) {
+        div.innerHTML= hu + "We're in Austin!";
+    }
    
-
     // Section 4.1 - Flight from Austin to St. Louis
-    
+    else if ((today > austinToSTLDepart) && (today < austinToSTLArrival)) {
+        div.innerHTML= hu + intro + "flying between Austin & St. Louis!";
+    }    
     
     // Section 4.2 - Time in St. Louis
-
+    else if ((today > austinToSTLArrival) && (today < stlToLondonDepart)) {
+        iv.innerHTML= hu + "We're in St. Louis!";
+    }
 
     // Section 5 - Flight from St. Louis to London
-    
+    else if ((today >= stlToLondonDepart) && (today <= stlToLondonArrival)) {
+        div.innerHTML= hu + intro + "flying between St. Louis! & London";
+    }
     
     // Section 6 - Post Holiday
     else {
