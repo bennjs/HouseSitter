@@ -44,14 +44,6 @@ function parkOpeningHours() {
     document.body.innerHTML = document.body.innerHTML.replace('parkCloseTime', time);
 }
 
-// adds a zero to the front of hours or minutes < 10
-function addZero(i) {
-    if (i < 10) {
-        i = "0" + i;
-    }
-    return i;
-}
-
 // tripStatus() uses the time and date in the UK (where it's most likely to be accessed) to update
 // the trip-status <p> in the HEADER with information about where we are and when we fly.
 function tripStatus() {
